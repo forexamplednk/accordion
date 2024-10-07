@@ -17,7 +17,6 @@ let accordion = function(arrIDs) {
   }
 
   let active = function() {
-    // console.log(this);
     let parentUl = this.closest('ul');
     if (parentUl) closeAll(parentUl);
     let parentLi = this.closest('li');
