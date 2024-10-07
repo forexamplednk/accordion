@@ -1,3 +1,3 @@
 window.addEventListener('load', function() {
-  accordion();
+  accordion(['acc1']);
 })
