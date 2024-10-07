@@ -6,8 +6,20 @@ let accordion = function(arrIDs) {
         h3
         div
   */
+  let closeAll = function(ul) {
+    let lis = ul.querySelectorAll(`li`);
+
+    if (!lis || lis.length == 0) return;
+
+    lis.forEach(function(li) {
+      li.classList.remove('active');
+    })
+  }
+
   let active = function() {
     // console.log(this);
+    let parentUl = this.closest('ul');
+    if (parentUl) closeAll(parentUl);
     let parentLi = this.closest('li');
    
     if (!parentLi) return;
